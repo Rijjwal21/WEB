@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniCare</title>
+
+    
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/static/images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/static/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+    <ul class="background">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="site-info">
+        <h1 class="site-name">UniCare</h1>
+        <p class="site-descripton">A complete solution for Doctors and Patients through which doctors
+            can see the patient history such as treatment by other doctors,
+            prescription, Lab test results, X-Rays etc.
+            While on the otherhand, Patients can find the best doctor
+            in the field by checking reviews of other patients and can
+            himself/herself review the doctor.</p>
+    </div>
+    <div class="home-page-image">
+        <img src="/static/images/home-page-image-1.png" alt="Internet not available">
+    </div>
+    <div class="action-button">
+
+        <div class="get-stated-section">
+
+            <div class="gsdiv"><button id="buttonofgetstarted" class="get-started">Get Started</button></div>
+            <!-- <button class="get-started">Get Started</button> -->
+
+
+            <div id="hello1" class="hide">
+                <div class="doctor-link-a">
+                    <img src="/static/images/doctor-logo.png" alt="Internet not available">
+                    <a href="DSignup" target="_self">Doctor</a>
+                </div>
+                <div class="patient-link-a">
+                    <img src="/static/images/patient-logo.png" alt="Internet not available">
+                    <a href="PSignup" target="_self">Patient</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="sign-in-section">
+
+            <div class="sidiv">
+                <button id="buttonofsignin" class="sign-in">Sign In</button>
+            </div>
+            <!-- <button class="sign-in">Sign In</button> -->
+
+
+            <div id="hello2" class="hide">
+                <div class="doctor-link-b">
+                    <img src="/static/images/doctor-logo.png" alt="Internet not available">
+                    <a href="DLogin" target="_self">Doctor</a>
+                </div>
+                <div class="patient-link-b">
+                    <img src="/static/images/patient-logo.png" alt="Internet not available">
+                    <a href="PLogin" target="_self">Patient</a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script>
+
+        var element1 = document.getElementById("buttonofgetstarted");
+        var element2 = document.getElementById("buttonofsignin");
+        element1.addEventListener("click", () => {
+            var temp = document.getElementById("hello1");
+            temp.classList.toggle('hide');
+        });
+        element2.addEventListener("click", () => {
+            var temp = document.getElementById("hello2");
+            temp.classList.toggle('hide');
+        });
+
+    </script>
+</body>
+
+</html>

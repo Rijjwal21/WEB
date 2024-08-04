@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicare</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/sign-in-doctor.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+</head>
+
+<body>
+    <header>
+        <div class="headerr">
+            <a href="index.html">
+                <h1>Unicare</h1>
+            </a>
+        </div>
+    </header>
+    <main>
+
+        <div action="" id="formbg" class="main-form">
+            <div class="form-header">
+
+                <div class="form-heading">
+                    <p>Sign In</p>
+                </div>
+                <div class="combine-logo-type">
+                    <!-- <img src="../images/doctor-logo.png" alt="Internet not available"> -->
+                    <p id="dock">DOCTOR</p>
+                </div>
+
+            </div>
+
+            <form action="" class="main-form1"  method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="e-mail">E-Mail</label>
+                    <input type="email" name="e-mail" id="e-mail" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" class="form-control">
+                </div>
+
+                <div class="form-group" class="sign-in-button">
+                    <input type="submit" value="Sign In" id="forgetpa" class="form-control">
+                </div>
+                <div class="form-group2" class="forget-password">
+                    <a href="#"><b><input type="submit" value="Forgot Password ?" id="forgetpa2" class="form-control"
+                                style="border: none;"></b></a>
+                </div>
+                <!-- NOTE : Only redirecting to dashboard and javascript left -->
+            </form>
+
+
+        </div>
+
+        </div>
+        <div class="bg"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+        </div>
+
+        <div class="form-page-image">
+            <!-- <img src="../images/get-started-form-logo-doctor.jpg" alt="Internet not available"> -->
+            <img src="/static/images/Screenshot 2022-08-29 at 3.02.56 PM.png" alt="Internet not available">
+        </div>
+    </main>
+    <div>
+        <footer class="footer-section">
+            <div class="container">
+                <div class="footer-cta pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="cta-text">
+                                    <h4>Find us</h4>
+                                    <span>Patiala</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="fas fa-phone"></i>
+                                <div class="cta-text">
+                                    <h4>Call us</h4>
+                                    <span>9779771813</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="far fa-envelope-open"></i>
+                                <div class="cta-text">
+                                    <h4>Mail us</h4>
+                                    <span>support@unicare.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-content pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-logo">
+                                    <img src="/static/images/LOGO.png" class="img-fluid" alt="logo">
+                                </div>
+                                <div class="footer-text">
+                                    <p>A complete solution for Doctors and Patients through which doctors
+                                        can see the patient history such as treatment by other doctors,</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>Useful Links</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">about</a></li>
+                                    <li><a href="#">services</a></li>
+                                    <li><a href="#">portfolio</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">Our Services</a></li>
+                                    <li><a href="#">Expert Team</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                    <li><a href="#">Latest News</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>Subscribe</h3>
+                                </div>
+                                <div class="footer-text mb-25">
+                                    <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                                </div>
+                                <div class="subscribe-form">
+                                    <form action="#">
+                                        <input type="text" placeholder="Email Address">
+                                        <button><i class="fab fa-telegram-plane"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                            <div class="copyright-text">
+                                <p>Copyright &copy; 2022, All Right Reserved <a
+                                        href="https://github.com/hardiktreats">The House Coders (THC)</a></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

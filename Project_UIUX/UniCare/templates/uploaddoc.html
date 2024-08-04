@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="#" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <table>
+        <tr>
+            <td>  <label for="Email">Email</label>
+              <input type="text" name="Email" value=""></td>
+  
+          </tr>
+        <tr>
+          <td>  <label for="Name">Name</label>
+            <input type="text" name="Name" value=""></td>
+
+        </tr>
+        
+        <tr>
+          <td><label for="Date">Date</label>
+          <input type="date" name="Date" value=""></td>
+
+        </tr>
+        <tr>
+          <td>
+            <input type="file" name="photos" multiple>
+          </td>
+          <tr>
+            <td><input type="submit" value="Upload" id="Upload"></td>
+          </tr>
+
+      </table>
+
+    </form>
+  </body>
+</html>

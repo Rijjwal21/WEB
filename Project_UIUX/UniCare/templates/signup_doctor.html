@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicare</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/get-started-doctor.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <style>
+        div#error {
+            font-size: 1.5rem;
+            color: red;
+            text-align: center;
+          }
+        </style>
+</head>
+
+<body>
+    <header>
+        <div class="headerr">
+            <a href="index.html">
+                <h1>Unicare</h1>
+            </a>
+        </div>
+    </header>
+    <main>
+
+        <div class="main-form">
+            <div class="form-header">
+                <div class="form-heading">
+                    <p>Get Started</p>
+                    <p class="TUM">DOCTOR</p>
+                </div>
+            </div>
+
+
+            <form action="" class="main-form1" id="FORM"  method="post">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="firstname">Firstname</label>
+                            <input type="text" name="firstname" id="firstname" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="lastname">Lastname</label>
+                            <input type="text" name="lastname" id="lastname" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="date-of-birth">Date of Birth</label>
+                    <input type="date" name="date-of-birth" id="date-of-birth" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-number">Contact Number</label>
+                    <input type="number" name="contact-number" id="contact-number" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="e-mail">E-Mail</label>
+                    <input type="email" name="e-mail" id="e-mail" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender" class="form-control">
+                        <option value="none" selected>Select a Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <label for="Speciality">Speciality</label>
+                    <select name="Speciality" id="Speciality" class="form-control">
+                        <option value="none1">Select Speciality</option>
+                        <option value="Neurology">Neurology</option>
+                        <option value="Pathology">Pathlology</option>
+                        <option value="Radiology">Radiology</option>
+                        <option value="Orthopaedics">Orthopaedics</option>
+                        <option value="Cardiology">Cardiology</option>
+                        <option value="other1">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" name="confirm-password" id="confirm-password" class="form-control">
+                </div>
+                <div class="form-group" class="submit-button">
+                    <input type="submit" value="Sign Up" id="Sign-Up" class="form-control">
+                </div>
+                <div id="error"></div>
+                <!-- NOTE : Only redirecting to home page and javascript left -->
+            </form>
+            <br>
+            <br>
+            <br>
+
+        </div>
+        </div>
+        <div class="bg"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+        </div>
+
+        <div class="form-page-image">
+            <img src="/static/images/get-started-doctor-original.png" alt="Internet not available">
+        </div>
+    </main>
+    <br>
+    <br>
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>Patiala</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>9779771813</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>support@unicare.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <img src="/static/images/LOGO.png" class="img-fluid" alt="logo">
+                            </div>
+                            <div class="footer-text">
+                                <p>A complete solution for Doctors and Patients through which doctors
+                                    can see the patient history such as treatment by other doctors,</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">about</a></li>
+                                <li><a href="#">services</a></li>
+                                <li><a href="#">portfolio</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Our Services</a></li>
+                                <li><a href="#">Expert Team</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Latest News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2022, All Right Reserved <a
+                                    href="https://github.com/hardiktreats">The House Coders (THC)</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const firstName = document.getElementById('firstname');
+const lastName = document.getElementById('lastname');
+// const dateOfBirth
+// const bloodGroup
+const contactNumber = document.getElementById('contact-number');
+const email = document.getElementById('e-mail');
+// const gender = document.getElementById('');
+const password = document.getElementById('password');
+const confirmPassword = document.getElementById('confirm-password');
+const form = document.getElementById('FORM');
+const errorElement = document.getElementById('error');
+
+
+
+form.addEventListener('submit', (e) => {
+    let messages = []
+    //    if(password.value.length < 8){
+    //     messages.push('Password should be atleast of 8 characters')
+    //    }
+    if (contactNumber.value.length != 10) {
+        messages.push('Enter a Valid 10 Digit number')
+    }
+    if (password.value !== confirmPassword.value) {
+        messages.push('Password entered are not same')
+    }
+    if (password.value.length < 8 ) {
+        messages.push('Password should be atleast 8 digits')
+    }
+    if (firstName.value === '' || firstName.value == null) {
+        messages.push('First Name is Required')
+    }
+    if (lastName.value === '' || lastName.value == null) {
+        messages.push('Last Name is Required')
+    }
+    if (messages.length > 0) {
+        e.preventDefault()
+        errorElement.innerHTML = messages.join('<br>')
+    }
+})
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(184, 255, 249);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* Site name and description */
+.site-name {
+    position: absolute;
+    width: 74.2rem;
+    height: 27.1rem;
+    left: 6.4rem;
+    top: 5rem;
+
+    /* font-family: 'Raleway'; */
+    font-family: 'Comfortaa', cursive;
+    ;
+    font-style: normal;
+    /* font-weight: 700; */
+    font-weight: lighter;
+    font-size: 120px;
+    line-height: 119px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+.site-descripton {
+    position: absolute;
+    width: 64.9rem;
+    height: 17.4rem;
+    left: 7.1rem;
+    top: 30.1rem;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: light;
+    font-size: 2.4rem;
+    line-height: 143%;
+    /* or 34px */
+
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+
+
+
+/* Get started and Sign in Button */
+
+.action-button .get-stated-section button {
+    background-color: black;
+    /* background-color:42C2FF; */
+
+    color: white;
+    position: absolute;
+    width: 26.6rem;
+    height: 4.8rem;
+    left: 7.3rem;
+    top: 53rem;
+    border: 0.2rem solid #000000;
+
+}
+
+.action-button .sign-in-section button {
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    position: absolute;
+    width: 26.6rem;
+    height: 4.8rem;
+    left: 37.2rem;
+    top: 53rem;
+    border: 0.2rem solid #000000;
+
+}
+
+
+.action-button .get-stated-section .gsdiv :hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+.action-button .sign-in-section .sidiv :hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+
+}
+
+
+/* form styles */
+
+button {
+    font-size: 2.5rem;
+}
+
+.doctor-link-a {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 26.6rem;
+    height: 5.3rem;
+    left: 7.3rem;
+    top: 57.65rem;
+    border: .2rem solid #000000;
+}
+
+.patient-link-a {
+    box-sizing: border-box;
+    position: absolute;
+    width: 26.6rem;
+    height: 5.3rem;
+    left: 7.3rem;
+    top: 62.8rem;
+    border-width: 0px .2rem .2rem .2rem;
+    border-style: solid;
+    border-color: #000000;
+}
+
+.doctor-link-b {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 26.6rem;
+    height: 5.3rem;
+    left: 37.2rem;
+    top: 57.65rem;
+
+    border: 0.2rem solid #000000;
+}
+
+.patient-link-b {
+    box-sizing: border-box;
+    position: absolute;
+    width: 26.6rem;
+    height: 5.3rem;
+    left: 37.2rem;
+    top: 62.8rem;
+    border-width: 0px .2rem .2rem .2rem;
+    border-style: solid;
+    border-color: #000000;
+}
+
+.action-button a {
+    text-decoration: none;
+    color: black;
+
+    font-size: larger;
+    font-family: monospace;
+    font-size: 2.5rem;
+
+    position: absolute;
+    margin-top: 1.0rem;
+    margin-left: 9.3rem;
+}
+
+.action-button img {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 30px;
+    top: 10px;
+}
+
+.hide {
+    opacity: 0;
+}
+
+
+/* Home Page image styling */
+
+.home-page-image img {
+
+    position: absolute;
+    width: 780px;
+    height: 710px;
+    left: 740px;
+    top: -30px;
+
+    filter: drop-shadow(-17px 4px 49px rgba(0, 0, 0, 0.32));
+    /* border-radius: 1278px 1200px 1278px 1278px; */
+}
+
+/*Background Style*/
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #66f8eb;
+    overflow: hidden;
+}
+
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 21s linear infinite;
+}
+
+
+
+
+.background li:nth-child(0) {
+    left: 32%;
+    width: 131px;
+    height: 131px;
+    bottom: -131px;
+    animation-delay: 1s;
+}
+
+.background li:nth-child(1) {
+    left: 67%;
+    width: 93px;
+    height: 93px;
+    bottom: -93px;
+    animation-delay: 4s;
+}
+
+.background li:nth-child(2) {
+    left: 6%;
+    width: 116px;
+    height: 116px;
+    bottom: -116px;
+    animation-delay: 4s;
+}
+
+.background li:nth-child(3) {
+    left: 79%;
+    width: 82px;
+    height: 82px;
+    bottom: -82px;
+    animation-delay: 6s;
+}
+
+.background li:nth-child(4) {
+    left: 13%;
+    width: 88px;
+    height: 88px;
+    bottom: -88px;
+    animation-delay: 8s;
+}
+
+.background li:nth-child(5) {
+    left: 85%;
+    width: 99px;
+    height: 99px;
+    bottom: -99px;
+    animation-delay: 18s;
+}
+
+.background li:nth-child(6) {
+    left: 63%;
+    width: 83px;
+    height: 83px;
+    bottom: -83px;
+    animation-delay: 21s;
+}
+
+.background li:nth-child(7) {
+    left: 82%;
+    width: 156px;
+    height: 156px;
+    bottom: -156px;
+    animation-delay: 28s;
+}
+
+.background li:nth-child(8) {
+    left: 66%;
+    width: 84px;
+    height: 84px;
+    bottom: -84px;
+    animation-delay: 7s;
+}
+
+.background li:nth-child(9) {
+    left: 21%;
+    width: 80px;
+    height: 80px;
+    bottom: -80px;
+    animation-delay: 16s;
+}
+
+.background li:nth-child(10) {
+    left: 61%;
+    width: 93px;
+    height: 93px;
+    bottom: -93px;
+    animation-delay: 11s;
+}
+
+/* Responsive */
+@media (max-width:1400px){
+    .background{
+        display: none;
+    }
+}
+@media (max-width:998px) {
+    .home-page-image img {
+        top: 10rem;
+        left: 75rem;
+        width: 50rem;
+        height: 50rem;
+    }
+
+    html {
+        font-size: 50%;
+    }
+    .background{
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    html {
+        font-size: 45%;
+    }
+    .home-page-image img {
+        /* display: none; */
+        top: 10rem;
+        left: 70rem;
+        width: 50rem;
+        height: 50rem;
+    }
+    .background{
+        display: none;
+    }
+}
+
+@media (max-width:378px) {
+    html {
+        font-size: 45%;
+    }
+    .home-page-image img {
+        /* display: none; */
+        top: 55rem;
+        left: 15rem;
+        width: 50rem;
+        height: 50rem;
+    }
+    .background{
+        display: none;
+    }
+    .action-button .sign-in-section button{
+    left: 46.3rem;
+    }
+    .doctor-link-b{
+    left: 46.3rem;
+    }
+    .patient-link-b{
+    left: 46.3rem;
+    }
+    .action-button img{
+        top: 5px;
+    }
+    .site-info{
+        margin-top: 100rem;
+    }
+}

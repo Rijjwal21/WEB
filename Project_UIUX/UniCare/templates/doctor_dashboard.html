@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/doctorDashboard.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="footer.css">
+    <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
+    <title>Doctor - Dashboard</title>
+
+</head>
+
+<body>
+
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/static/images/account.png" alt="Internet not found">
+                </span>
+
+                <div class="text logo-text">
+                    <!-- first name + Last name -->
+                    <span class="name">{{name}}</span>
+                    <span class="profession">doctor</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-id-card icon'></i>
+                            <!-- Unique ID -->
+                            <span class="text nav-text">
+                                <p id="doctorId">Unique ID</p>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <!-- Gender -->
+                            <!-- <i class='bx bx-male icon'></i> -->
+                            <i class='bx bx-female icon'></i>
+                            <span class="text nav-text">
+                                <p id="doctorGender">Gender</p>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-calendar-star icon'></i>
+                            <!-- Date of birth -->
+                            <span class="text nav-text">
+                                <p id="doctorDob">DOB</p>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-droplet-half icon'></i>
+                            <!-- Blood Group -->
+                            <span class="text nav-text">
+                                <p id="doctorspeciality">Speciality</p>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-envelope icon'></i>
+                            <!-- E-Mail -->
+                            <span class="text nav-text">
+                                <p id="doctorEmail">E-Mail</p>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-phone-call icon'></i>
+                            <!-- Contact -->
+                            <span class="text nav-text">
+                                <p id="doctorContact">Contact</p>
+                            </span>
+                        </a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="index.html">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+        <button class="UPLOAD CLICK" id="uploadButton">
+            <img src="/static/images/boxbg.jpg" alt="Not Available">
+            <div class="infou">
+                <h3>Upload <br> Prescriptions </h3>
+            </div>
+            <div class="imginimgu">
+                <lord-icon id="gif" src="https://cdn.lordicon.com/wfadduyp.json" trigger="hover"
+                    colors="primary:#cccccc" style="width:50px;height:50px">
+                </lord-icon>
+            </div>
+        </button>
+        <a href="#" class="cardi">
+            <img src="/static/images/boxbg.jpg" alt="Not Available">
+            <div class="infoi">
+                <h3 id = "clickme">View <br> Documents </h3>
+            </div>
+            <div class="imginimgi">
+                <lord-icon src="https://cdn.lordicon.com/osuxyevn.json" trigger="hover" colors="primary:#cccccc"
+                    style="width:50px;height:50px">
+                </lord-icon>
+            </div>
+        </a>
+        <!-- <a href="#" class="cardi"> -->
+            <!-- <img src="boxbg.jpg" alt="Not Available"> -->
+
+            <!-- <div class="infoi">
+                <h3>View <br> Documents </h3>
+            </div> -->
+            <!-- <div class="imginimgi">
+                <lord-icon src="https://cdn.lordicon.com/osuxyevn.json" trigger="hover" colors="primary:#cccccc"
+                    style="width:50px;height:50px">
+                </lord-icon>
+            </div> -->
+            <div class=" cardi vanish" id="smallForm">
+                <h6 style="text-decoration: none ; font-family: 'Poppins', 'sans-serif'; 
+                color:white ; font-size: 1.5rem;
+                margin: 25px 0 0 60px;
+                ">Enter Patient ID</h6><br>
+                <!-- View Document Form  -->
+                <form  action="#" method="post">
+                    {% csrf_token %}
+                    <input type="number" name="pID" id="pID" style="padding:10px 50px;
+                margin: -10rem 0 0 1rem;
+                border-radius : 15px"><br>
+                     <button name="view" id="view" type="submit"
+                        style="width:8rem;height:2rem; border: 2px solid gray;
+                        margin: 10px 0 0 5.5rem; border-radius: 15px;
+                        font-family: 'Poppins', 'sans-serif';">View</button><a>
+                    <button id="backButton" type="submit"
+                    style="width:8rem;height:2rem; border: 2px solid gray;
+                    margin: 3px 0 0 5.5rem; border-radius: 15px;
+                    font-family: 'Poppins', 'sans-serif';">Back</button>
+            </div>
+        <!-- </a> -->
+
+
+        <div class="ucard vanish" id="form-background">
+
+            <img src="/static/images/boxbg.jpg" alt="Not Available">
+            <div class="uinfo">
+                <h3 id="uploadHeading">Upload</h3>
+                <div class="Options" id="opt">
+                    <form class="" action="#" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                    <div class="collection">
+                        <label for="uid">Unique ID :</label><br>
+                    <input type="number" id="uid" name="uid" >
+                    </div>
+                    <div class="collection">
+                        <label for="udname">Document Name :</label><br>
+                        <input type="text" id="udname" name="udname">
+                    </div>
+                    <div class="collection"><label for="Dateu">Date</label><br>
+                        <input type="date" id="udate" name="udate">
+                    </div>
+                    <div class="collection">
+                        <label for="udimg">Image</label><br>
+                            <input type="file" id="imgud" name="xyz">
+                    </div>
+
+                    <input type="submit" id="lname" name="upload"><br>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+        </div>
+
+
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="card">
+
+            <img src="/static/images/boxbg.jpg" alt="Not Available">
+            <div class="info">
+                <h3 id="polarRat">Check <br> Appointments !</h3>
+            </div>
+            <div class="imginimg">
+                <lord-icon src="https://cdn.lordicon.com/psnhyobz.json" trigger="hover" colors="primary:#cccccc"
+                    style="width:50px;height:50px">
+                </lord-icon>
+            </div>
+        </div>
+
+        <div class="info card vanish" id="polarBear">
+            <h3 style="margin-top: 5rem;
+            margin-left: 1rem">Coming Soon !</h3>
+        </div>
+
+        <div class="sideimg">
+            <img id="side-image"  src="/static/images/doctor-dashboard-sideimage.png" alt="Not Available" >
+        </div>
+        <!-- <div class="BMI">
+            <img src="boxbg.jpg" alt="Not Available">
+            <div class="infobm">
+                <h3>Hello! "doctor Name"</h3>
+            </div>
+            <div>
+                <h1 class="txtx">Age</h1>
+                <h1 class="txtxa">Height</h1>
+                <h1 class="txtxb">Weight</h1>
+            </div>
+            <div class="imginimgbm">
+                <lord-icon
+                    src="https://cdn.lordicon.com/hbjlznlo.json"
+                    trigger="hover"
+                    colors="primary:#cccccc,secondary:#7fccdf"
+                    style="width:70px;height:70px">
+                </lord-icon>
+            </div>
+        </div> -->
+
+    </nav>
+    
+    <section class="home">
+        <a href="#" style="text-decoration:none ;">
+            <div class="text" style="color:rgb(0, 0, 0);">UniCare</div>
+        </a>
+    </section>
+
+
+    <script>
+
+         
+     
+   document.getElementById('polarRat').addEventListener('click' ,()=>{
+            document.getElementById('polarBear').classList.toggle('vanish');
+        });
+
+        
+        document.getElementById('polarBear').addEventListener('click',()=>{
+            document.getElementById('polarBear').classList.add('vanish');
+
+        });
+    var data = JSON.parse("{{data|escapejs}}");
+
+        // document.getElementById('polarRat').addEventListener('mousedown' ,()=>{
+        //     document.getElementById('polarBear').classList.remove('vanish');
+        // });
+        const smallForm = document.getElementById('smallForm');
+        document.getElementById('clickme').addEventListener( 'click' , () => {
+            smallForm.classList.remove('vanish');
+    
+        });
+        document.getElementById('backButton').addEventListener('click' , ()=>{
+            smallForm.classList.add('vanish');
+            
+        });
+        const up = document.getElementById('uploadButton');
+        const foarm = document.getElementById('form-background');
+        // console.log(up)
+        // console.log(foarm)
+        up.addEventListener('click', () => {
+            // prompt("clicked")
+            foarm.classList.toggle('vanish')
+        }
+        );
+        let varia = document.getElementById("doctorGender");
+
+        let male = "Gender : MALE"
+        varia.innerHTML = male;
+
+
+        let u = document.getElementById("doctorId");
+        let g = document.getElementById("doctorGender");
+        let d = document.getElementById("doctorDob");
+        let b = document.getElementById("doctorspeciality");
+        let e = document.getElementById("doctorEmail");
+        let c = document.getElementById("doctorContact");
+
+        {% comment %} let ID = "Unique Id : P10119"; {% endcomment %}
+        {% comment %} let GENDER = "Gender : Male"; {% endcomment %}
+        {% comment %} let DOB = "D.O.B : 11-09-2002"; {% endcomment %}
+        {% comment %} let SPECL = "Speciality : Neuro"; {% endcomment %}
+        {% comment %} let EMAIL = "Tarik-bhateja@gmail.com"; {% endcomment %}
+        {% comment %} let CONTACT = "9888974512"; {% endcomment %}
+
+        let ID = "Unique Id : D" + data['Unique_id'];
+        let GENDER = "Gender : "+ data['Gender'];
+        let DOB = "D.O.B : " + data['Date_of_birth'];
+        let SPECL = "Speciality : " + data['speciality'];
+        let EMAIL = data['Email'];
+        let CONTACT = "Contact : " + data['Contact'];
+
+        u.innerHTML = ID;
+        g.innerHTML = GENDER;
+        d.innerHTML = DOB;
+        b.innerHTML = SPECL;
+        e.innerHTML = EMAIL;
+        c.innerHTML = CONTACT;
+
+        const body = document.querySelector('body'),
+            sidebar = body.querySelector('nav'),
+            toggle = body.querySelector(".toggle"),
+            searchBtn = body.querySelector(".search-box"),
+            modeSwitch = body.querySelector(".toggle-switch"),
+            modeText = body.querySelector(".mode-text");
+
+
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        })
+
+        searchBtn.addEventListener("click", () => {
+            sidebar.classList.remove("close");
+        })
+
+        modeSwitch.addEventListener("click", () => {
+            body.classList.toggle("dark");
+
+            if (body.classList.contains("dark")) {
+                modeText.innerText = "Light mode";
+            } else {
+                modeText.innerText = "Dark mode";
+
+            }
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicare</title>
+    <link rel="stylesheet" href="/static/css/viewDocumentStyle.css">
+</head>
+<!-- FOOTER HEADER -->
+<body class="bg-container">
+    <h1 id='heading'>Medical Prescription</h1>
+    <div class="cardContainer">
+        
+
+            <!-- <div class="card">
+                <img src="https://th.bing.com/th/id/R.5c8d32059234ef74ace8c17c3519eff8?rik=KISonIhLIHfPAw&riu=http%3a%2f%2fghailawfirm.com%2fwp-content%2fuploads%2f2017%2f12%2fFinal-notice-medical-bills.jpeg&ehk=4pfoFfJL2mOUauI%2fT4QHksd6UBkGDjMu5jJ7eQ%2b7vcw%3d&risl=&pid=ImgRaw&r=0" alt="Document Image">
+                <div class="info">
+                    <h2>Document Title</h2>
+                    <span>00/00/0000</span>
+                </div>
+            </div> -->
+
+        
+
+        
+    
+    </div>
+
+    <div class="popup-image vanish" id="pop" >
+        <span id="cross">&times;</span>
+        <img id="tempo" src="https://th.bing.com/th/id/R.5c8d32059234ef74ace8c17c3519eff8?rik=KISonIhLIHfPAw&riu=http%3a%2f%2fghailawfirm.com%2fwp-content%2fuploads%2f2017%2f12%2fFinal-notice-medical-bills.jpeg&ehk=4pfoFfJL2mOUauI%2fT4QHksd6UBkGDjMu5jJ7eQ%2b7vcw%3d&risl=&pid=ImgRaw&r=0" alt="Unable to open the image">
+
+    </div>
+    <script>
+    
+    var data = JSON.parse("{{data|escapejs}}");   
+    {% comment %} var link = window.location.href; {% endcomment %}
+
+    //Replace all content before ? with ""
+    {% comment %} link = link.replace("http://127.0.0.1:8000/DLogin/viewDocument1.html?",""); {% endcomment %}
+    
+    //Display content
+    {% comment %} alert("Page_One.html contains:" + link + ""); {% endcomment %}
+    for (const i in data) {
+        if(data[i].Unique_id=={{link}})
+        {
+        const main = document.querySelector(".cardContainer")
+        const card = document.createElement('div');
+        card.classList = 'card';
+        const movieCard = `
+    
+        <img src="${data[i].image}" alt="Document Image">
+                    <div class="info">
+                        <h2>${data[i].title}</h2>
+                        <span>${data[i].date}</span>
+        `;
+        
+        card.innerHTML += movieCard;
+        main.appendChild(card);
+        }
+        
+      }
+
+const area = document.querySelectorAll(".card img");
+console.log(area);
+
+{% comment %} document.querySelectorAll(".card img").forEach( image =>{
+    image.onClick = () => {
+        prompt("Helo")
+        document.querySelector('.popup-image').style.display = 'block';
+        document.querySelector('.pop-image img').src = image.getAttribute('src');   
+     }
+}); {% endcomment %}
+
+const cross = document.getElementById("cross");
+const hoverCard = document.getElementById("pop");
+var hell = document.querySelectorAll(".cardContainer img");
+document.querySelectorAll(".cardContainer img").forEach(image => {
+    image.addEventListener('click', () => {
+        // alert('clicked');
+        document.getElementById('tempo').src = image.getAttribute('src');
+        
+        hoverCard.classList.remove('vanish');
+    });
+    // image.onClick = () => {
+    //     prompt("Helo")
+    //     document.querySelector('.popup-image').style.display = 'block';
+    //     document.querySelector('.pop-image img').src = image.getAttribute('src');
+    // }
+});
+
+cross.addEventListener('click', () => {
+    // alert('cross Clicked')
+    hoverCard.classList.add('vanish');
+});
+
+    </script>
+    {% comment %} <script src="/static/js/cardData.js"></script>
+    <script src="/static/js/viewDocumentScript.js"></script> {% endcomment %}
+    <footer class="footer-section">
+        <div class="containerx">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>Patiala</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>9779771813</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>support@unicare.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <img src="/static/images/LOGO.png" class="img-fluid" alt="logo">
+                            </div>
+                            <div class="footer-text">
+                                <p>A complete solution for Doctors and Patients through which doctors
+                                    can see the patient history such as treatment by other doctors,</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">about</a></li>
+                                <li><a href="#">services</a></li>
+                                <li><a href="#">portfolio</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Our Services</a></li>
+                                <li><a href="#">Expert Team</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Latest News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2022, All Right Reserved <a
+                                    href="https://github.com/hardiktreats">The House Coders (THC)</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="../../index.html">Home</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
